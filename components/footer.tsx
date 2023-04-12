@@ -7,7 +7,7 @@ export default function Footer() {
             <Layout className={"py-8 flex items-center justify-between"}>
                 <span>{new Date().getFullYear()} &copy; All Rights Reserved.</span>
                 <div className="flex items-center">
-                    Check out my <Link href="https://github.com/vatsalp98" className="underline underline-offset-2 ml-1 hover:text-primary" target="_blank"> projects</Link>
+                    Vatsaal D. Parmar
                 </div>
                 
             </Layout>

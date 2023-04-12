@@ -34,6 +34,10 @@ const AnimatedNumbers = (props: Props) => {
 
 export default function AboutPage() {
     return (
+        <>
+        <head>
+            <title>Vatsaal | About</title>
+        </head>
         <main className="flex w-full flex-col items-center justify-center">
             <Layout className={"pt-10"}>
                 <AnimatedText text={"Passion fuels Me"} className={"!text-6xl pb-10"}/>
@@ -75,5 +79,6 @@ export default function AboutPage() {
                 </div>
             </Layout>
         </main>
+        </>
     );
 }

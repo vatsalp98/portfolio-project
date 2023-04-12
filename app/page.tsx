@@ -1,4 +1,4 @@
-"use client";
+"use client"
 
 import AnimatedText from "@/components/animatedText";
 import Layout from "@/components/layout";
