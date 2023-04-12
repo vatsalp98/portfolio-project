@@ -41,7 +41,10 @@ export default function AboutPage() {
                     <div className="col-span-3 flex flex-col items-start justify-start">
                         <h2 className="mb-4 text-lg font-bold uppercase text-dark/75">Biography</h2>
                         <p className="my-4 font-medium">
-                        I have always had a knack for technology and working with computers. In 2005, I started working with HTML and CSS to make some minor edits on a small business website that I was operating. What I thought was just a few small edits turned into a love for programming.
+                            I have always had a natural talent for technology and working with computers. In 2005, I began working with HTML and CSS to make some minor edits on a small business website that I was running. What I initially thought would be just a few small changes turned into a passion for programming.
+                        </p>
+                        <p className="my-4 font-medium">
+                            Fascinated with how intricate programming can be I was quickly drawn to learn more. I started learning javascript and was even more enthused with making websites interactive. I am now spending my time building projects with Next JS, AWS, Azure and learning new technologies.
                         </p>
                     </div>
                     <div className="col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark bg-light p-8">
