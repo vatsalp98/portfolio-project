@@ -20,21 +20,22 @@ export default function RootLayout({
   const pathname = usePathname();
 
   return (
-    <html lang="en" className={`bg-light ${montserrat.variable} font-mont`}>
-      <head>
-        <title>Vatsaal | Software Developer</title>
-        <meta name="description" content="I’m a software developer specializing in building (and occasionally designing) exceptional digital experiences." />
-        <link rel="icon" href="./favicon.ico" />
-      </head>
-      <body className=''>
-        <NavBar/>
-        <main className='w-full h-full inline-block z-0 bg-light px-32'>
-          <AnimatePresence key={pathname}>
-            {children}
-          </AnimatePresence>
-        </main>
-      </body>
-      <Footer/>
-    </html>
+    
+      <html lang="en" className={`bg-light ${montserrat.variable} font-mont`}>
+        <head>
+          <title>Vatsaal | Software Developer</title>
+          <meta name="description" content="I’m a software developer specializing in building (and occasionally designing) exceptional digital experiences." />
+          <link rel="icon" href="./favicon.ico" />
+        </head>
+        <AnimatePresence initial={false} mode='wait'>
+          <body className='' key={pathname}>
+            <NavBar/>
+            <main className='w-full h-full inline-block z-0 bg-light px-32'>
+                {children}
+            </main>
+          </body>
+        </AnimatePresence>
+        <Footer/>
+      </html>
   )
 }

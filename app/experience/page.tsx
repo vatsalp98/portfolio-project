@@ -35,14 +35,16 @@ export default function ExperiencePage() {
                         address={"Burnaby, BC"} 
                         work={"I'm an innovative entrepreneur with a marketing and technology background, passionate about helping small businesses grow their online presence. As the founder and CEO of a startup, I develop user-friendly tools and resources for social media marketing, website design, and SEO. My goal is to empower local businesses to succeed in the competitive online marketplace."}                        
                     />
+
                     <DetailsExperience 
-                        position={"Mobile developer"} 
+                        position={"Lead Mobile developer"} 
                         company={"SalonEverywhere"} 
                         companyLink={"https://saloneverywhere.com"} 
                         time={"2020-2022"} 
                         address={"Toronto, ON"} 
                         work={"I was a mobile developer at SalonEverywhere, responsible for publishing a Flutter app on both the App Store and Google Play Store. In addition to this, I also integrated AWS backend services to the app, ensuring its scalability, security, and reliability. With attention to detail and dedication to excellence, I delivered a high-quality product that enhanced the user experience. My skills and expertise in mobile app development and AWS backend helped SalonEverywhere reach new heights and provide users with a seamless mobile experience."}
                     />
+                    
                     <DetailsExperience 
                         position={"IT Services"} 
                         company={"SFU"} 
