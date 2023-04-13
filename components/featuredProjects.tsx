@@ -15,7 +15,7 @@ export default function FeaturedProject(props: Props) {
     return (
         <article className="w-full flex items-center rounded-br-2xl justify-between rounded-3xl border border-solid border-dark bg-light shadow-2xl p-12 lg:flex-col lg:p-8 xs:rounded-2xl xs:rounded-br-3xl xs:p-4">
             <Link href={props.link} target="_blank" className="w-1/2 cursor-pointer overflow-hidden rounded-lg">
-                <Image src={props.img} className="w-full h-auto" alt="Project Picture" width={100} height={100}/>
+                <Image src={props.img} className="w-full h-auto" alt="Project Picture" width={500} height={500}/>
             </Link>
 
             <div className="w-1/2 flex flex-col items-start justify-between pl-6">

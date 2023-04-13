@@ -4,6 +4,8 @@ import Footer from '@/components/footer';
 import './globals.css'
 import NavBar from '@/components/navBar'
 import {Montserrat} from 'next/font/google';
+import { AnimatePresence } from 'framer-motion';
+import { usePathname } from 'next/navigation';
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -15,6 +17,8 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const pathname = usePathname();
+
   return (
     <html lang="en" className={`bg-light ${montserrat.variable} font-mont`}>
       <head>
@@ -25,7 +29,9 @@ export default function RootLayout({
       <body className=''>
         <NavBar/>
         <main className='w-full h-full inline-block z-0 bg-light px-32'>
-          {children}
+          <AnimatePresence key={pathname}>
+            {children}
+          </AnimatePresence>
         </main>
       </body>
       <Footer/>

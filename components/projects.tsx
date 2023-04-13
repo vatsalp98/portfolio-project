@@ -14,7 +14,7 @@ export default function ProjectDetails(props: Props) {
     return (
         <article className="w-full flex flex-col items-center justify-center rounded-2xl border border-solid border-dark bg-light p-6 relative">
             <Link href={props.link} target="_blank" className="w-full cursor-pointer overflow-hidden rounded-lg">
-                <Image src={props.img} className="w-full h-auto" alt="Project Picture" width={200} height={200}/>
+                <Image src={props.img} className="w-full h-auto" alt="Project Picture" width={500} height={500}/>
             </Link>
 
             <div className="w-full flex flex-col items-start justify-between pt-4">
