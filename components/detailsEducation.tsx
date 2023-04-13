@@ -20,13 +20,13 @@ export default function DetailsEducation(props: Props) {
                 whileInView={{y:0}}
                 transition={{duration: 0.5, type: 'spring'}}
             >
-                <h3 className="capitalize font-bold text-2xl sm:text-xl xs:text-lg">
+                <h3 className="capitalize font-bold text-2xl sm:text-xl xs:text-lg text-dark dark:text-light">
                     {props.type}&nbsp;
                 </h3>
                 <span className="capitalize font-medium text-dark/75 xs:text-sm dark:text-light/75">
                     {props.time} | {props.place}
                 </span>
-                <p className="font-medium w-full text-lg md:text-sm">
+                <p className="font-medium w-full text-lg md:text-sm text-dark dark:text-light">
                     {props.info}
                 </p>
             </motion.div>

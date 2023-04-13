@@ -27,10 +27,10 @@ export default function Home() {
             priority
             sizes="(max-width: 768px) 100vw, (max-width:1200px) 50vw, 50vw"/>
           </div>
-          <div className="w-1/2 flex flex-col items-center self-center lg:w-full lg:text-center">
+          <div className="w-1/2 flex flex-col items-center self-center lg:w-full lg:text-center ml-5">
             <AnimatedText text={"Bringing Ideas to reality with latest technologies."} className={"!text-6xl !text-left pb-10 xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl"} />
-            <Roles superpowers={roles} className={"!text-4xl !text-left font-bold w-full mx-auto lg:!text-center"}/>
-            <p className="my-4 font-medium md:text-sm xs:text-xs">
+            <Roles superpowers={roles} className={"!text-4xl !text-left font-bold w-full mx-auto lg:!text-center text-dark dark:text-light"}/>
+            <p className="my-4 font-medium md:text-sm xs:text-xs text-dark dark:text-light">
               I’m focused on building responsive web and mobile applications while focusing on serverless back-end technologies. I am currently developing an application to help developing countries improve their health services.
             </p>
             <div className="flex items-center self-start mt-2 lg:self-center">

@@ -2,9 +2,12 @@ import Link from "next/link";
 import Logo from "./logo";
 import { usePathname  } from "next/navigation";
 import {motion} from "framer-motion";
-import { CodeOutlined, GithubOutlined, LinkedinFilled, LinkedinOutlined, MenuOutlined, MessageFilled, ThunderboltFilled, TwitterOutlined } from "@ant-design/icons";
+import { CodeOutlined, GithubFilled, GithubOutlined, LinkedinFilled, LinkedinOutlined, MenuOutlined, MessageFilled, ThunderboltFilled, TwitterOutlined } from "@ant-design/icons";
 import { useState } from "react";
 import { MobileCustomLink } from "./mobileCustomLink";
+import {MdDarkMode} from "react-icons/md";
+import {SiHackerrank} from "react-icons/si";
+import {BiMailSend} from "react-icons/bi";
 
 interface CustomLinkProps {
     href: string;
@@ -15,7 +18,7 @@ interface CustomLinkProps {
 const CustomLink: React.FC<CustomLinkProps> = ({ href, title, className }) => {
     const router = usePathname();
     return (
-        <Link href={href} className={`${className} relative group font-semibold`}>
+        <Link href={href} className={`${className} relative group font-semibold text-dark dark:text-light`}>
             {title}
             <span className={`h-[1px] inline-block bg-dark absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300 dark:bg-light ${router === href ? 'w-full' : 'w-0'}
             `}>&nbsp;</span>
@@ -50,26 +53,25 @@ export default function NavBar() {
                 
                 <nav className="flex items-center justify-center flex-wrap">
                     <motion.a href="https://twitter.com/vatsalparmar98" target={"_blank"} whileHover={{y:-5}} whileTap={{scale: 0.9}} className="w-6 mr-3">
-                        <TwitterOutlined style={{ fontSize: '30px', color: "blue" }}/>
+                        <TwitterOutlined style={{ fontSize: '30px', color: "#1DA1F2" }}/>
                     </motion.a>
                     <motion.a href="https://github.com/vatsalp98" target={"_blank"} whileHover={{y:-5}} whileTap={{scale: 0.9}} className="w-6 mx-3">
-                        <GithubOutlined style={{ fontSize: '30px' }}/>
+                        <GithubFilled style={{ fontSize: '30px', color: "black" }}/>
                     </motion.a>
-                    <motion.a href="https://www.linkedin.com/in/vatsalparmar98/" target={"_blank"} whileHover={{y:-5}} whileTap={{scale: 0.9}} className="w-6 mx-3">
-                        <LinkedinFilled style={{ fontSize: '30px', color: "blue" }}/>
+                    <motion.a href="https://www.linkedin.com/in/vatsalparmar98/" target={"_blank"} whileHover={{y:-5}} whileTap={{scale: 0.9}} className="mx-3">
+                        <LinkedinFilled style={{ fontSize: '30px', color: "#1DA1F2" }}/>
                     </motion.a>
-                    <motion.a href="mailto:vatsalparmar98@gmail.com" target={"_blank"} whileHover={{y:-5}} whileTap={{scale: 0.9}} className="w-6 ml-3">
-                        <MessageFilled style={{ fontSize: '26px', color: "teal" }}/>
+                    <motion.a href="mailto:vatsalparmar98@gmail.com" target={"_blank"} whileHover={{y:-5}} whileTap={{scale: 0.9}} className="mx-3">
+                        <BiMailSend className="w-8 h-8 text-primary"/>
+                    </motion.a>
+                    <motion.a href="https://www.hackerrank.com/vparmar2" target={"_blank"} whileHover={{y:-5}} whileTap={{scale: 0.9}} className="mx-4">
+                        <SiHackerrank className="w-8 h-8 text-green-600"/>
                     </motion.a>
                     <motion.a href="https://www.hackerrank.com/vparmar2" target={"_blank"} whileHover={{y:-5}} whileTap={{scale: 0.9}} className="w-6 ml-4">
-                        <CodeOutlined style={{ fontSize: '26px', color: "teal" }}/>
-                    </motion.a>
-                    <motion.a href="https://www.hackerrank.com/vparmar2" target={"_blank"} whileHover={{y:-5}} whileTap={{scale: 0.9}} className="w-6 ml-4">
-                        <ThunderboltFilled style={{ fontSize: '26px', color: "teal" }}/>
+                        <MdDarkMode className="w-8 h-8 text-dark dark:text-light"/>
                     </motion.a>
                 </nav>
             </div>
-
             {
                 open ? 
                 <motion.div className="min-w-[70vw] z-30 flex flex-col fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 justify-between items-center bg-dark/90 dark:bg-light/75 rounded-lg backdrop-blur-md py-32 dark:text-light"

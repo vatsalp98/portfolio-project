@@ -21,11 +21,11 @@ export default function FeaturedProject(props: Props) {
             <div className="w-1/2 flex flex-col items-start justify-between pl-6">
                 <span className="text-primary font-medium text-xl">{props.type}</span>
                 <Link href={props.link} target="_blank" className="hover:underline underline-offset-2">
-                    <h2 className="my-2 w-full text-left text-4xl font-bold">{props.title}</h2>
+                    <h2 className="my-2 w-full text-left text-4xl font-bold text-dark dark:text-light">{props.title}</h2>
                 </Link>
                 <p className="my-2 font-medium text-dark">{props.summary}</p>
                 <div className="mt-2 flex items-center">
-                    <Link href={props.github} target="_blank" className="w-10"> <GithubFilled style={{fontSize: "34px"}}/></Link>
+                    <Link href={props.github} target="_blank" className="w-10"> <GithubFilled style={{fontSize: "34px", color: "black"}}/></Link>
                     <Link href={props.link} target="_blank" className="ml-4 rounded-lg bg-dark text-light p-2 px-6 text-lg font-semibold hover:bg-light hover:text-dark duration-75 border-transparent hover:border-dark border-2"> Visit Project</Link>
                 </div>
             </div>

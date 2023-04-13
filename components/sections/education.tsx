@@ -27,7 +27,7 @@ export default function EducationSection() {
                 <motion.div className="absolute left-9 top-0 w-[4px] h-full bg-dark origin-top md:w-[2px] md:left-[30px] xs:left-[20px]" ref={ref}
                 style={{scaleY: scrollYProgress}}
                 />
-                <ul className="w-full flex flex-col items-start justify-between ml-4 ml-4 xs:ml-2">
+                <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
                     <DetailsEducation 
                         type={"Bachelors of Applied Sciences"} 
                         time={"2015 - 2022"} 

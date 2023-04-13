@@ -31,7 +31,7 @@ const AnimatedNumbers = (props: Props) => {
         })
     }, [springValue, props.value]);
 
-    return <span ref={ref}></span>
+    return <span ref={ref} className="text-dark dark:text-light"></span>
 }
 
 export default function AboutPage() {
@@ -46,13 +46,13 @@ export default function AboutPage() {
                 <div className="grid w-full grid-cols-8 gap-16 sm:gap-8">
                     <div className="col-span-3 flex flex-col items-start justify-start xl:col-span-4 md:order-2 md:col-span-8">
                         <h2 className="mb-4 text-lg font-bold uppercase text-dark/75">Biography</h2>
-                        <p className="my-4 font-medium">
+                        <p className="my-4 font-medium text-dark dark:text-light">
                             I have always had a natural talent for technology and working with computers. In 2005, I began working with HTML and CSS to make some minor edits on a small business website that I was running. What I initially thought would be just a few small changes turned into a passion for programming.
                         </p>
-                        <p className="my-4 font-medium">
+                        <p className="my-4 font-medium text-dark dark:text-light">
                             Fascinated with how intricate programming can be I was quickly drawn to learn more. I started learning javascript and was even more enthused with making websites interactive. I am now spending my time building projects with Next JS, AWS, Azure and learning new technologies.
                         </p>
-                        <p className="my-4 font-medium">
+                        <p className="my-4 font-medium text-dark dark:text-light">
                             I excel in software architecture, design patterns, and agile methodologies to deliver high-quality projects on time. I have excellent communication skills, collaborate well with teams, and share my knowledge with the tech community through open-source contributions.
                         </p>
                     </div>
@@ -65,19 +65,19 @@ export default function AboutPage() {
 
                     <div className="col-span-2 flex flex-col items-end justify-between xl:col-span-8 xl:flex-row xl:items-center md:order-3">
                         <div className="flex flex-col items-end justify-center xl:items-center">
-                            <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
+                            <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl text-dark dark:text-light">
                                 <AnimatedNumbers value={20}/>+
                             </span>
                             <h2 className="text-xl font-medium capitalize text-dark/75 xl:text-center md:text-lg sm:text-base xs:text-sm">satisfied clients</h2>
                         </div>
                         <div className="flex flex-col items-end justify-center xl:items-center">
-                            <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
+                            <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl text-dark dark:text-light">
                                 <AnimatedNumbers value={50}/>+
                             </span>
                             <h2 className="text-xl font-medium capitalize text-dark/75 xl:text-center md:text-lg sm:text-base xs:text-sm ">projects completed</h2>
                         </div>
                         <div className="flex flex-col items-end justify-center xl:items-center">
-                            <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
+                            <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl text-dark dark:text-light">
                                 <AnimatedNumbers value={5}/>+
                             </span>
                             <h2 className="text-xl font-medium capitalize text-dark/75 xl:text-center md:text-lg sm:text-base xs:text-sm">years of experience</h2>

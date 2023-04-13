@@ -22,11 +22,11 @@ export default function DetailsExperience(props: Props) {
                 whileInView={{y:0}}
                 transition={{duration: 0.5, type: 'spring'}}
             >
-                <h3 className="capitalize font-bold text-2xl sm:text-xl xs:text-lg">{props.position}&nbsp;<a target={"_blank"} href={props.companyLink} className="text-primary capitalize">@ {props.company}</a></h3>
+                <h3 className="capitalize font-bold text-2xl sm:text-xl xs:text-lg text-dark dark:text-light">{props.position}&nbsp;<a target={"_blank"} href={props.companyLink} className="text-primary capitalize">@ {props.company}</a></h3>
                 <span className="capitalize font-medium text-dark/75 xs:text-sm">
                     {props.time} | {props.address}
                 </span>
-                <p className="font-medium w-full text-lg md:text-sm">
+                <p className="font-medium w-full text-lg md:text-sm text-dark dark:text-light">
                     {props.work}
                 </p>
             </motion.div>
