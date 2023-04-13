@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Logo from "./logo";
-import { usePathname  } from "next/navigation";
+import { usePathname, useRouter  } from "next/navigation";
 import {motion} from "framer-motion";
 import { CodeOutlined, GithubFilled, GithubOutlined, LinkedinFilled, LinkedinOutlined, MenuOutlined, MessageFilled, ThunderboltFilled, TwitterOutlined } from "@ant-design/icons";
 import { useState } from "react";
@@ -15,14 +15,21 @@ interface CustomLinkProps {
     className?: string;
 }
 
+
 const CustomLink: React.FC<CustomLinkProps> = ({ href, title, className }) => {
-    const router = usePathname();
+    const pathName = usePathname();
+    const router = useRouter();
+
+    const handleClick = () => {
+        router.push(href);
+    }
+
     return (
-        <Link href={href} className={`${className} relative group font-semibold text-dark dark:text-light`}>
+        <button onClick={handleClick} className={`${className} relative group font-semibold text-dark dark:text-light`}>
             {title}
-            <span className={`h-[1px] inline-block bg-dark absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300 dark:bg-light ${router === href ? 'w-full' : 'w-0'}
+            <span className={`h-[1px] inline-block bg-dark absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300 dark:bg-light ${pathName === href ? 'w-full' : 'w-0'}
             `}>&nbsp;</span>
-        </Link>
+        </button>
     );
 };
 
