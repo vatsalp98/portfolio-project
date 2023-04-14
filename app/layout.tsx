@@ -27,14 +27,12 @@ export default function RootLayout({
           <meta name="description" content="I’m a software developer specializing in building (and occasionally designing) exceptional digital experiences." />
           <link rel="icon" href="./favicon.ico" />
         </head>
-        <AnimatePresence initial={false} mode='wait'>
-          <body className='' key={pathname}>
+        <body className='' key={pathname}>
             <NavBar/>
             <main className='w-full h-full inline-block z-0 bg-light px-32'>
                 {children}
             </main>
-          </body>
-        </AnimatePresence>
+        </body>
         <Footer/>
       </html>
   )
