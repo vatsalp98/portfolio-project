@@ -8,6 +8,10 @@ import { MobileCustomLink } from "./mobileCustomLink";
 import {MdDarkMode} from "react-icons/md";
 import {SiHackerrank} from "react-icons/si";
 import {BiMailSend} from "react-icons/bi";
+import {BsFillSunFill, BsGithub} from "react-icons/bs";
+import useThemeSwitcher from "./hooks/useThemeSwitcher";
+import DesktopSocials from "./desktopSocialIcons";
+import HamburgerMenu from "./hamburgerMenu";
 
 interface CustomLinkProps {
     href: string;
@@ -36,19 +40,16 @@ const CustomLink: React.FC<CustomLinkProps> = ({ href, title, className }) => {
 export default function NavBar() {
     
     const [open, setOpen] = useState(false);
+    const {darkMode, setDarkMode} = useThemeSwitcher();
 
     const handleClick = () => {
         setOpen(!open);
     }
 
     return (
-        <header className="w-full px-32 py-8 font-medium flex items-center justify-between bg-light relative z-10 lg:px-16 sm:px-12 xs:px-8">
-
-            <button className="flex-col justify-center items-center hidden lg:flex" onClick={handleClick}>
-                <span className={`bg-dark transition-all duration-300 ease-out dark:bg-light block h-0.5 w-6 rounded-sm ${open ? 'rotate-45 translate-y-1' : '-translate-y-0.5'}`}></span>
-                <span className={`bg-dark dark:bg-light transition-all duration-300 ease-out block h-0.5 w-6 rounded-sm my-0.5 ${open ? 'opacity-0': 'opacity-100'}`}></span>
-                <span className={`bg-dark dark:bg-light transition-all duration-300 ease-out block h-0.5 w-6 rounded-sm ${open ? '-rotate-45 -translate-y-1' : 'translate-y-0.5'}`}></span>
-            </button>
+        <header className="w-full px-32 py-8 font-medium flex items-center justify-between bg-light relative z-10 lg:px-16 sm:px-12 xs:px-8 dark:bg-dark">
+            
+            <HamburgerMenu open={open} className={"flex-col justify-center items-center hidden lg:flex"} onClick={handleClick} />
             
             <div className="w-full flex justify-between items-center lg:hidden">
                 <nav>
@@ -59,24 +60,7 @@ export default function NavBar() {
                 </nav>
                 
                 <nav className="flex items-center justify-center flex-wrap">
-                    <motion.a href="https://twitter.com/vatsalparmar98" target={"_blank"} whileHover={{y:-5}} whileTap={{scale: 0.9}} className="w-6 mr-3">
-                        <TwitterOutlined style={{ fontSize: '30px', color: "#1DA1F2" }}/>
-                    </motion.a>
-                    <motion.a href="https://github.com/vatsalp98" target={"_blank"} whileHover={{y:-5}} whileTap={{scale: 0.9}} className="w-6 mx-3">
-                        <GithubFilled style={{ fontSize: '30px', color: "black" }}/>
-                    </motion.a>
-                    <motion.a href="https://www.linkedin.com/in/vatsalparmar98/" target={"_blank"} whileHover={{y:-5}} whileTap={{scale: 0.9}} className="mx-3">
-                        <LinkedinFilled style={{ fontSize: '30px', color: "#1DA1F2" }}/>
-                    </motion.a>
-                    <motion.a href="mailto:vatsalparmar98@gmail.com" target={"_blank"} whileHover={{y:-5}} whileTap={{scale: 0.9}} className="mx-3">
-                        <BiMailSend className="w-8 h-8 text-primary"/>
-                    </motion.a>
-                    <motion.a href="https://www.hackerrank.com/vparmar2" target={"_blank"} whileHover={{y:-5}} whileTap={{scale: 0.9}} className="mx-4">
-                        <SiHackerrank className="w-8 h-8 text-green-600"/>
-                    </motion.a>
-                    <motion.a href="https://www.hackerrank.com/vparmar2" target={"_blank"} whileHover={{y:-5}} whileTap={{scale: 0.9}} className="w-6 ml-4">
-                        <MdDarkMode className="w-8 h-8 text-dark dark:text-light"/>
-                    </motion.a>
+                    <DesktopSocials />
                 </nav>
             </div>
             {
@@ -94,24 +78,7 @@ export default function NavBar() {
                 </nav>
                 
                 <nav className="flex items-center justify-center flex-wrap mt-2">
-                    <motion.a href="https://twitter.com/vatsalparmar98" target={"_blank"} whileHover={{y:-5}} whileTap={{scale: 0.9}} className="w-6 mr-3 sm:mx-1">
-                        <TwitterOutlined style={{ fontSize: '30px', color: "blue" }}/>
-                    </motion.a>
-                    <motion.a href="https://github.com/vatsalp98" target={"_blank"} whileHover={{y:-5}} whileTap={{scale: 0.9}} className="w-6 mx-3 sm:mx-1">
-                        <GithubOutlined style={{ fontSize: '30px' }}/>
-                    </motion.a>
-                    <motion.a href="https://www.linkedin.com/in/vatsalparmar98/" target={"_blank"} whileHover={{y:-5}} whileTap={{scale: 0.9}} className="w-6 mx-3 sm:mx-1">
-                        <LinkedinFilled style={{ fontSize: '30px', color: "blue" }}/>
-                    </motion.a>
-                    <motion.a href="mailto:vatsalparmar98@gmail.com" target={"_blank"} whileHover={{y:-5}} whileTap={{scale: 0.9}} className="w-6 ml-3 sm:mx-1">
-                        <MessageFilled style={{ fontSize: '26px', color: "teal" }}/>
-                    </motion.a>
-                    <motion.a href="https://www.hackerrank.com/vparmar2" target={"_blank"} whileHover={{y:-5}} whileTap={{scale: 0.9}} className="w-6 ml-4 sm:mx-1">
-                        <CodeOutlined style={{ fontSize: '26px', color: "teal" }}/>
-                    </motion.a>
-                    <motion.a href="https://www.hackerrank.com/vparmar2" target={"_blank"} whileHover={{y:-5}} whileTap={{scale: 0.9}} className="w-6 ml-4 sm:mx-1">
-                        <ThunderboltFilled style={{ fontSize: '26px', color: "teal" }}/>
-                    </motion.a>
+                    <DesktopSocials />
                 </nav>
             </motion.div> : null
             }
