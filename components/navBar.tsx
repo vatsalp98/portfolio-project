@@ -25,11 +25,11 @@ const CustomLink: React.FC<CustomLinkProps> = ({ href, title, className }) => {
     }
 
     return (
-        <button onClick={handleClick} className={`${className} relative group font-semibold text-dark dark:text-light`}>
+        <Link href={href} className={`${className} relative group font-semibold text-dark dark:text-light`}>
             {title}
             <span className={`h-[1px] inline-block bg-dark absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300 dark:bg-light ${pathName === href ? 'w-full' : 'w-0'}
             `}>&nbsp;</span>
-        </button>
+        </Link>
     );
 };
 
