@@ -30,13 +30,13 @@ export default function EducationSection() {
                 <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
                     <DetailsEducation 
                         type={"Bachelors of Applied Sciences"} 
-                        time={"2015 - 2022"} 
+                        time={"2016 - 2023"} 
                         place={"Simon Fraser University (SFU)"} 
                         info={"Relevant courses included Data Structures and Algorithms, Computer Systems Engineering, Data Analysis and Mathematical data modelling."} 
                     />
                     <DetailsEducation 
                         type={"International Baccalaureat (I.B)"} 
-                        time={"2012 - 2025"} 
+                        time={"2013 - 2016"} 
                         place={"Ecole Internationale Arc-En-Ciel (Togo, Africa)"} 
                         info={"Relevant courses included Mathematics (HL), Physics (HL), Economy (HL), French A (SL), English B (SL), Chemistry (SL)"} 
                     />

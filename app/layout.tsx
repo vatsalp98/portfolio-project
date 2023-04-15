@@ -34,7 +34,7 @@ export default function RootLayout({
             <main className='w-full min-h-screen inline-block z-0 bg-light px-32 dark:bg-dark'>
                 {children}
             </main>
-            <div className='fixed z-90 bottom-10 right-8 bg-light w-[42px] h-[42px] p-1 rounded-full drop-shadow-lg flex justify-center items-center text-light text-4xl hover:bg-indigo-500 shadow-lg hover:drop-shadow-2xl hover:scale-110 hover:-translate-y-2 duration-100 transition-all ease-in-out dark:bg-dark dark:hover:bg-indigo-500' onClick={() => {
+            <div className='fixed z-90 bottom-10 right-8 bg-light w-[42px] h-[42px] p-1 rounded-full drop-shadow-lg flex justify-center items-center text-light text-4xl hover:bg-indigo-500 shadow-lg hover:drop-shadow-2xl hover:scale-110 hover:-translate-y-2 duration-100 transition-all ease-in-out dark:bg-dark dark:hover:bg-indigo-500 cursor-pointer' onClick={() => {
                             let check = darkMode === "light" ? "dark": "light";
                             setDarkMode(check);
                 }}
