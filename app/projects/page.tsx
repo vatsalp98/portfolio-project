@@ -28,6 +28,17 @@ export default function ProjectsPage() {
                             />
                         </div>
 
+                        <div className="col-span-12">
+                            <FeaturedProject
+                                type={"Featured Project"}
+                                title={"RoomExpert"}
+                                summary={"Room Expert has been built using the robust T3 Tech Stack and Appwrite for backend operations. Room Expert uses a state-of-the-art machine learning model called ControlNet. This model is responsible for generating different variations of the rooms according to the chosen styles. It intelligently considers the spatial characteristics and furniture arrangements to offer the most fitting design suggestions."}
+                                img={"/roomexpert.png"}
+                                link={"https://room-expert.vercel.app/"}
+                                github={"https://github.com/vatsalp98/RoomExpert"}
+                            />
+                        </div>
+
                         <div className="col-span-6">
                             <ProjectDetails 
                                 title={"Shift Manager"} 
