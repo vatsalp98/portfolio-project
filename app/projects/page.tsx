@@ -41,6 +41,20 @@ export default function ProjectsPage() {
 
             <div className="col-span-12">
               <FeaturedProject
+                type={"Freelancing Project"}
+                showGit={false}
+                title={"G.V.P.P.S"}
+                summary={
+                  "The Typescript and Next JS website for the local table tennis club is designed to improve their online presence. It includes a modern design, easy navigation, and features such as a homepage, history, tournaments, news, and gallery. The website is also responsive and includes a contact page. It helps the club attract new members and supporters."
+                }
+                img={"/gvpps.png"}
+                link={"https://gvpps.com"}
+                github={"https://github.com/vatsalp98/GVPPS"}
+              />
+            </div>
+
+            <div className="col-span-12">
+              <FeaturedProject
                 showGit={false}
                 type={"Native Marketplace"}
                 title={"Nechitrade"}
@@ -118,20 +132,6 @@ export default function ProjectsPage() {
                 img={"/salonPro2.png"}
                 link={"https://saloneverywhere.com/salonpro"}
                 github={"https://saloneverywhere.com/salonpro"}
-              />
-            </div>
-
-            <div className="col-span-12">
-              <FeaturedProject
-                type={"Freelancing Project"}
-                showGit={false}
-                title={"G.V.P.P.S"}
-                summary={
-                  "The Typescript and Next JS website for the local table tennis club is designed to improve their online presence. It includes a modern design, easy navigation, and features such as a homepage, history, tournaments, news, and gallery. The website is also responsive and includes a contact page. It helps the club attract new members and supporters."
-                }
-                img={"/gvpps.png"}
-                link={"https://gvpps.com"}
-                github={"https://github.com/vatsalp98/GVPPS"}
               />
             </div>
           </div>
