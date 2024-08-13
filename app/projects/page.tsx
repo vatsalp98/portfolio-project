@@ -28,6 +28,20 @@ export default function ProjectsPage() {
             <div className="col-span-12">
               <FeaturedProject
                 showGit={false}
+                type={"Building Maintenance"}
+                title={"Aurora Services Inc."}
+                summary={
+                  "Aurora services is your best building maintenance service provider to assure you get the highest care for your buildings."
+                }
+                img={"/aurora.png"}
+                link={"https://website-henna-one-44.vercel.app/"}
+                github={"https://website-henna-one-44.vercel.app/"}
+              />
+            </div>
+
+            <div className="col-span-12">
+              <FeaturedProject
+                showGit={false}
                 type={"Money Transfer"}
                 title={"CendMate Inc."}
                 summary={
